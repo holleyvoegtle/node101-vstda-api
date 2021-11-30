@@ -70,7 +70,7 @@ describe("server module", function() {
         done();
   		})
 	});
-	it("DELETE /api/TodoItems/{id} responds with an item", (done) => {
+	it("DELETE /api/TodoItems/{number} responds with an item", (done) => {
     chai.request(app)
       .delete('/api/TodoItems/0')
       .end((err, res) => {
@@ -80,7 +80,7 @@ describe("server module", function() {
         done()
       });
   });
-	it("GET /api/TodoItems/{id} responds with an item", (done) => {
+	it("GET /api/TodoItems/{number} responds with an item", (done) => {
 	  chai.request(app)
       .get('/api/TodoItems/1')
       .end((err, res) => {
